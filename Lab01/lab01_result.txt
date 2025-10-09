@@ -1,0 +1,5 @@
+Score: 8/10
+Comments: Trong report:
+- B2.2.5 thiếu TH chia 0
+- B2.2.6 pt bậc 1 thiếu TH vô nghiệm & TH vô số nghiệm
+- B6.5 & B6.6 thiếu TH input tự nhập
