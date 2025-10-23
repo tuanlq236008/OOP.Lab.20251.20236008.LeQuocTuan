@@ -55,6 +55,7 @@ public class Cart {
 		System.out.println("Cannot find the DVD with id: " + length);
 	}
 	
+
 	public void searchByTitle(String title) { 
 		for(int i=0;i<qtyOrdered;i++) {
 			if(itemsOrdered[i].getTitle().equals(title)) {
@@ -64,6 +65,13 @@ public class Cart {
 		}
 		System.out.println("Cannot find the DVD with title: " + title);
 	}
+
+
+	public String toString(DigitalVideoDisc disc) {
+		return "Title: " + disc.getTitle() + ", Category: " + disc.getCategory() + ", Director: " + disc.getDirector() + ", Length: " + disc.getLength() + ", Cost: " + disc.getCost() + " $";
+	}
+
+
 
 	public void display() {
 		System.out.println("***********************CART***********************");
