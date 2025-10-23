@@ -4,10 +4,17 @@ public class DigitalVideoDisc{
     private String director;
     private int length; 
     private float cost;
+    private static int nbDigitalVideoDiscs = 0;
+    private int id;
 
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDiscs++;
+        this.id = nbDigitalVideoDiscs;
     }
+
+
+
 
     public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
@@ -49,5 +56,10 @@ public class DigitalVideoDisc{
     public float getCost() {
         return cost;
     }
+
+    public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title);
+    }
+    
 
 }
