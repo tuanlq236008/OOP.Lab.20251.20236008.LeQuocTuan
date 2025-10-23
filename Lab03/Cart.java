@@ -46,6 +46,11 @@ public class Cart {
 		return sumCost;
 	}
 	
+	public String toString(DigitalVideoDisc disc) {
+		return "Title: " + disc.getTitle() + ", Category: " + disc.getCategory() + ", Director: " + disc.getDirector() + ", Length: " + disc.getLength() + ", Cost: " + disc.getCost() + " $";
+	}
+
+
 	public void display() {
 		System.out.println("***********************CART***********************");
 		System.out.println("Ordered Items:");
