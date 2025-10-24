@@ -1,0 +1,6 @@
+hust/soict/dsai/test/disc/TestPassingParameter.java
+hust/soict/dsai/test/cart/CartTest.java
+hust/soict/dsai/test/store/StoreTest.java
+hust/soict/dsai/aims/disc/DigitalVideoDisc.java
+hust/soict/dsai/aims/cart/Cart.java
+hust/soict/dsai/aims/store/Store.java
