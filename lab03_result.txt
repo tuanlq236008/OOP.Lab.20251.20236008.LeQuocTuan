@@ -1,4 +1,4 @@
-Score: 8/10
+Score: 7/10
 Comments:
 - Thiếu branch release/lab03 nên đành chấm main
 - Ở DigitalVideoDisc.java thì nbDigitalVideoDiscs++ phải xuất hiện ở mọi constructor
