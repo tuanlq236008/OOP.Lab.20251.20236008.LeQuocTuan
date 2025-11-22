@@ -27,9 +27,7 @@ public class Aims {
         System.out.printf("%.2f$\n", cart.totalCost());
 
 		
-        for (Media m : mediaList) {
-            System.out.println(m.toString());
-        }
+        cart.display();
         
     }
     
