@@ -12,9 +12,6 @@ public class CompactDisc extends Disc implements Playable {
     public String getArtist() {
         return artist;
     }
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
     public void addTrack(Track track) {
         if (tracks.contains(track)) {
             System.out.println("Track " + track.getTitle() + " is already in the list.");
@@ -31,6 +28,10 @@ public class CompactDisc extends Disc implements Playable {
             System.out.println("Track " + track.getTitle() + " not found in the list.");
         }
     }
+    public ArrayList<Track> getTracks() {
+        return tracks;
+    }
+    
     public int getLength() {
         int total = 0;
         for(Track t : tracks) total += t.getLength();

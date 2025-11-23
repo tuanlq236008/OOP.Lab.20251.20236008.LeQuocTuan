@@ -15,16 +15,15 @@ public class Disc extends Media {
     public int getLength() {
         return length;
     }
-    public void setLength(int length) {
-        this.length = length;
-    }
     public String getDirector() {
         return director;
     }
-    public void setDirector(String director) {
-        this.director = director;
+    @Override
+    public String toString() {
+        return "Disc - " + this.getTitle() + " - " + this.getCategory() +
+            " - " + this.getDirector() + " - " + this.getLength() +
+            ": " + this.getCost() + "$";
     }
-
 
     
 }

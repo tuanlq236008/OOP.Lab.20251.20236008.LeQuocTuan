@@ -25,10 +25,8 @@ public class Track implements Playable {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if(!(o instanceof Track)) return false;
-        Track other = (Track) o;
-        return this.title.equals(other.getTitle()) && this.length == other.length;
+    public String toString() {
+        return title + " - " + length;
     }
 
 }

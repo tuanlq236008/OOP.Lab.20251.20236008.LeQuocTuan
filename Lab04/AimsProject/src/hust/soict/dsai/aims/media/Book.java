@@ -10,6 +10,11 @@ public class Book extends Media {
         super(title, category, cost);
     
     }
+    public Book(String title, String category,  float cost, ArrayList<String> authors) {
+        super(title, category, cost);
+        this.authors = authors;
+    }
+
     public void addAuthor(String authorName) {
         if (authors.contains(authorName)) {
             System.out.println("Author " + authorName + " is already in the list.");
@@ -31,10 +36,6 @@ public class Book extends Media {
     public ArrayList<String> getAuthors() {
         return authors;
     }
-    public void setAuthors(ArrayList<String> authors) {
-        this.authors = authors;
-    }
-    
     
     @Override
     public String toString() {

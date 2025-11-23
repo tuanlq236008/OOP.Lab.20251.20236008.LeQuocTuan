@@ -44,14 +44,14 @@ public class Cart {
 		return sumCost;
 	}
 	
-	public void searchByCost(float cost) { 
+	public void searchByID(int id) { 
 		for(int i=0;i<qtyOrdered;i++) {
-			if(itemsOrdered.get(i).getCost()==cost) {
+			if(itemsOrdered.get(i).getId()==id) {
 				System.out.printf("Found DVD: %-30s %-10.3f\n",itemsOrdered.get(i).getTitle(),itemsOrdered.get(i).getCost());
 				return;
 			}
 		}
-		System.out.println("Cannot find the DVD with id: " + cost);
+		System.out.println("Cannot find the DVD with id: " + id);
 	}
 	
 
@@ -79,7 +79,7 @@ public class Cart {
 	}
 
 
-	public void display() {
+	public void print() {
 		System.out.println("***********************CART***********************");
 		System.out.println("Ordered Items:");
 		for (int i = 0; i < qtyOrdered; i++) {

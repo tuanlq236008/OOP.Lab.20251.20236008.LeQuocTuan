@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims.media;
 
 public class Media implements Comparable<Media> {
+    private int id;
     private String title;
     private String category;
     private float cost;
@@ -29,18 +30,8 @@ public class Media implements Comparable<Media> {
     public float getCost() {
         return cost;
     }
-
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setCost(float cost) {
-        this.cost = cost;
+    public int getId() {
+        return id;
     }
     
     @Override
