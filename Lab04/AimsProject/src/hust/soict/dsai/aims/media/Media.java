@@ -1,6 +1,6 @@
 package hust.soict.dsai.aims.media;
 
-public class Media implements Comparable<Media> {
+public class Media{
     private int id;
     private String title;
     private String category;
@@ -47,13 +47,4 @@ public class Media implements Comparable<Media> {
                 " - Category: " + this.getCategory() +
                 " - Cost: " + this.getCost() + "$";
     }
-
-    @Override
-    public int compareTo(Media other) {
-        int title_cmp = this.getTitle().compareTo(other.getTitle());
-
-        if (title_cmp != 0) return title_cmp;
-        else return Double.compare(this.getCost(), other.getCost());
-    }
-
 }
