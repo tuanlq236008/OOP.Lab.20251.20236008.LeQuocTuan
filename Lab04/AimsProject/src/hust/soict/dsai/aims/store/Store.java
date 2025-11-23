@@ -17,4 +17,20 @@ public class Store {
             }
         }
     }
+    public void displayStore() {
+        System.out.println("********* STORE *********");
+        for (int i = 0; i < itemsOrdered.size(); i++) {
+            System.out.println((i + 1) + ". " + itemsOrdered.get(i));
+        }
+        System.out.println("**************************\n");
+    }
+
+    public Media searchByTitle(String title) {
+        for (Media media : itemsOrdered) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
+            }
+        }
+        return null;
+    }
 }

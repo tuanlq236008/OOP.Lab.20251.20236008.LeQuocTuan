@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.cart;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
@@ -42,14 +44,14 @@ public class Cart {
 		return sumCost;
 	}
 	
-	public void searchByID(int ID) { 
+	public void searchByCost(float cost) { 
 		for(int i=0;i<qtyOrdered;i++) {
-			if(itemsOrdered.get(i).getId()==ID) {
+			if(itemsOrdered.get(i).getCost()==cost) {
 				System.out.printf("Found DVD: %-30s %-10.3f\n",itemsOrdered.get(i).getTitle(),itemsOrdered.get(i).getCost());
 				return;
 			}
 		}
-		System.out.println("Cannot find the DVD with id: " + ID);
+		System.out.println("Cannot find the DVD with id: " + cost);
 	}
 	
 
@@ -68,6 +70,13 @@ public class Cart {
 		return "Title: " + disc.getTitle() + ", Category: " + disc.getCategory() + ", Director: " + disc.getDirector() + ", Length: " + disc.getLength() + ", Cost: " + disc.getCost() + " $";
 	}
 
+	public void sortByTitleCost() {
+    Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+}
+
+	public void sortByCostTitle() {
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+	}
 
 
 	public void display() {
@@ -79,5 +88,48 @@ public class Cart {
 		System.out.println("Total cost: " + totalCost() + " $");
 		System.out.println("***************************************************");
 	}
-	
+	public void showCartMenu(Scanner sc) {
+    int option = -1;
+
+    do {
+        System.out.println("Options: ");
+        System.out.println("--------------------------------");
+        System.out.println("1. Filter media in cart");
+        System.out.println("2. Sort media in cart");
+        System.out.println("3. Remove media from cart");
+        System.out.println("4. Play a media");
+        System.out.println("5. Place order");
+        System.out.println("0. Back");
+        System.out.println("--------------------------------");
+        System.out.print("Please choose a number: 0-1-2-3-4-5: ");
+
+        try {
+            option = Integer.parseInt(sc.nextLine());
+
+            switch (option) {
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    System.out.println("Order placed successfully!");
+                    itemsOrdered.clear();
+                    qtyOrdered = 0;
+                    break;
+                case 0:
+                    System.out.println("Going back...");
+                    break;
+                default:
+                    System.out.println("Invalid option. Please enter 0 to 5.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a number.");
+        }
+
+    } while (option != 0);
+}
 }

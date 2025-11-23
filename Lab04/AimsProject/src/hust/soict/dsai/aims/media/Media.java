@@ -1,25 +1,25 @@
 package hust.soict.dsai.aims.media;
 
-public class Media {
-    private int id;
+public class Media implements Comparable<Media> {
     private String title;
     private String category;
     private float cost;
 
-    public Media( int id, String title) {
+    public Media( String title) {
 		this.title = title;
-        this.id = id;
+       
 	}
-    public Media( int id, String title, String category, float cost) {
+    public Media( String title, String category, float cost) {
 		this.title = title;
 		this.category = category;
 		this.cost = cost;
-        this.id = id;
+      
 	}
 
-    public int getId() {
-        return id;
-    }
+    public static final MediaComparatorByTitleCost COMPARE_BY_TITLE_COST = new MediaComparatorByTitleCost();
+    public static final MediaComparatorByCostTitle COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();
+
+    
     public String getTitle() {
         return title;
     }
@@ -30,9 +30,6 @@ public class Media {
         return cost;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -53,5 +50,19 @@ public class Media {
         return this.title.equals(other.getTitle());
     }
 
+    @Override
+    public String toString() {
+        return "Media: " + this.getTitle() +
+                " - Category: " + this.getCategory() +
+                " - Cost: " + this.getCost() + "$";
+    }
+
+    @Override
+    public int compareTo(Media other) {
+        int title_cmp = this.getTitle().compareTo(other.getTitle());
+
+        if (title_cmp != 0) return title_cmp;
+        else return Double.compare(this.getCost(), other.getCost());
+    }
 
 }
