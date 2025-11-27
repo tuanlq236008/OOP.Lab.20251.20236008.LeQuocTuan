@@ -8,6 +8,7 @@
         "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/javafx.graphics.jar",
         "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/javafx.media.jar",
         "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/javafx-swt.jar",
-        "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/javafx.fxml.jar"
+        "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/javafx.fxml.jar",
+        "/Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib/**/*.jar"
     ]
 }

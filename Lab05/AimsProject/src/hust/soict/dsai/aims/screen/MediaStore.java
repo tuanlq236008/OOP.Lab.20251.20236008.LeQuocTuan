@@ -1,11 +1,11 @@
 package hust.soict.dsai.aims.screen;
 
 import hust.soict.dsai.aims.media.Playable;
-import hust.soict.ict.aims.media.*;
+import hust.soict.dsai.aims.media.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class MediaStore extends JPanel{
+public class MediaStore extends JPanel {
     private Media media;
 
     public MediaStore(Media media) {
@@ -24,7 +24,7 @@ public class MediaStore extends JPanel{
 
         JButton addToCartButton = new JButton("Add to cart");
 
-        if(media instanceof Playable) {
+        if (media instanceof Playable) {
             JButton playButton = new JButton("Play");
             container.add(playButton);
 

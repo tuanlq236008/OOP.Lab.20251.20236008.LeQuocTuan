@@ -1,15 +1,12 @@
 package hust.soict.dsai.aims.screen;
 
-import javax.swing.BoxLayout;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-
+import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.store.Store;
+import java.awt.*;
+import java.util.ArrayList;
+import javax.swing.*;
 
-public class StoreScreen extends JFrame{
+public class StoreScreen extends JFrame {
     private Store store;
 
     public StoreScreen(Store store) {
@@ -24,7 +21,8 @@ public class StoreScreen extends JFrame{
         setTitle("Store");
         setSize(1024, 768);
     }
-    JMenu creatMenuBar() {
+
+    JMenuBar creatMenuBar() {
         JMenu menu = new JMenu("Option");
 
         JMenu smUpdateStore = new JMenu("Update Store");
@@ -45,7 +43,7 @@ public class StoreScreen extends JFrame{
     }
 
     JPanel createHeader() {
-        JPanel header = new JMenuBar();
+        JPanel header = new JPanel();
         header.setLayout(new BoxLayout(header, BoxLayout.X_AXIS));
 
         JLabel title = new JLabel("AIMS");
@@ -56,11 +54,11 @@ public class StoreScreen extends JFrame{
         cart.setPreferredSize(new Dimension(100, 50));
         cart.setMaximumSize(new Dimension(100, 50));
 
-        header.add(Box.createRigidArea(new Dimension(10,10)));
+        header.add(Box.createRigidArea(new Dimension(10, 10)));
         header.add(title);
         header.add(Box.createHorizontalGlue());
         header.add(cart);
-        header.add(Box.createRigidArea(new Dimension(10,10)));
+        header.add(Box.createRigidArea(new Dimension(10, 10)));
 
         return header;
     }
@@ -69,11 +67,11 @@ public class StoreScreen extends JFrame{
         JPanel center = new JPanel();
         center.setLayout(new GridLayout(3, 3, 2, 2));
 
+        ArrayList<Media> mediaInStore = store.getItemsInStore();
         for (int i = 0; i < 9; i++) {
-            MediaStore cell = new MediaStore(store.getMediaInStore().get(i));
+            MediaStore cell = new MediaStore(mediaInStore.get(i));
             center.add(cell);
         }
-
         return center;
     }
 
@@ -85,5 +83,4 @@ public class StoreScreen extends JFrame{
         return north;
     }
 
-    
 }
