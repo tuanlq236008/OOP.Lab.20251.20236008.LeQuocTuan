@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run Painter",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.javafx.Painter",
+            "vmArgs": "--module-path /Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics --enable-native-access=javafx.graphics"
+        }
+    ]
+}
