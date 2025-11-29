@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import hust.soict.dsai.aims.store.Store;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 import hust.soict.dsai.aims.media.Playable;
 
@@ -81,10 +82,15 @@ public class ViewStoreScreen extends JFrame {
 
     public static void main(String[] args) {
         Store store = new Store();
-        // Add some sample media to the store
-        // store.addMedia(new Book(...));
-        // store.addMedia(new CD(...));
-        // store.addMedia(new DVD(...));
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+        store.addMedia(dvd1);
+
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star War", "Science Fiction", "George Lucas", 87, 24.95f);
+        store.addMedia(dvd2);
+
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
+        store.addMedia(dvd3);
+
         new ViewStoreScreen(store);
     }
 }
