@@ -3,6 +3,15 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.swing.AWTAccumulator",
+            "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4",
+            "vmArgs": "--module-path /Users/lequoctuan/Downloads/javafx-sdk-17.0.18/lib --add-modules javafx.controls,javafx.fxml,javafx.swing"
+        },
+        
+        {
+            "type": "java",
             "name": "Run Painter",
             "request": "launch",
             "mainClass": "hust.soict.globalict.javafx.Painter",

@@ -8,13 +8,15 @@ import javafx.stage.Stage;
 
 public class Painter extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Painter.fxml"));
         Parent root = loader.load();
-        Controller controller = loader.getController();
-        primaryStage.setTitle("Painter Application");
-        primaryStage.setScene(new Scene(root, 600, 400));
-        primaryStage.show();
+
+        Scene scene = new Scene(root);
+        stage.setTitle("Painter");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     public static void main(String[] args) {
