@@ -1,0 +1,14 @@
+1. Which classes are aggregates of other classes? Checking all constructors of whole classes if they
+initialize for their parts?
+-> The class Media are aggregates of class Cart and Store. All the constructors of the classes will initialize for their parts.
+2. What class should implement the Comparable interface?
+-> The Comparable interface should be implemented by a class that we can define a natural ordering for its objects.
+3. In those classes, how should you implement the compareTo()method to reflect the ordering that we want?
+->To implement the compareTo() method correctly, we must define a consistent and logical ordering and return negative int (< 0) 
+if the current object is less than the argument, zero (0) if objects are equal in ordering and positive int (> 0) if the current object is greater than the argument.
+4. Question: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+-> No, the Comparable interface only allows one natural ordering (defined by the compareTo() method). If we need multiple sorting rules 
+(e.g., "by title then cost" and "by cost then title"), we must use Comparator instead.
+5. Question: Suppose the DVDs have a different ordering rule from the other media types, that is by title, then decreasing length, then cost. 
+How would you modify your code to allow this?
+-> In the definition of the DVD class, we can override the method compareTo() to allow ordering rule which is different from other media.
