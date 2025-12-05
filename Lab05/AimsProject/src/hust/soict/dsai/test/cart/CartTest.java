@@ -1,4 +1,5 @@
 package hust.soict.dsai.test.cart;
+
 import hust.soict.dsai.aims.cart.*;
 import hust.soict.dsai.aims.media.*;
 
@@ -17,7 +18,6 @@ public class CartTest {
 
         cart.print();
 
-        cart.searchByID(1);
         cart.searchByTitle("a");
     }
 }
