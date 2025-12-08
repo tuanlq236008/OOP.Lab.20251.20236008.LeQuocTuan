@@ -1,0 +1,46 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.StoreScreen",
+            "projectName": "lab5_e33c03b5"
+        },
+        {
+            "type": "java",
+            "name": "SwingAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.swing.SwingAccumulator",
+            "projectName": "lab5_e33c03b5"
+        },
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.CartScreen",
+            "projectName": "lab5_e33c03b5"
+        },
+        {
+            "type": "java",
+            "name": "AWTAccumulator",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.swing.AWTAccumulator",
+            "projectName": "lab5_e33c03b5"
+        },
+        {
+            "type": "java",
+            "name": "Current File (Default)",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Run Painter (JavaFX)",
+            "request": "launch",
+            "mainClass": "hust.soict.globalict.javafx.Painter",
+            "vmArgs": "--module-path \"/Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib/\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+        }
+    ]
+}
