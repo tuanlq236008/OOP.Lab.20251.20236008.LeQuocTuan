@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.screen;
+package hust.soict.dsai.aims.screen.manager;
 
 import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.store.Store;

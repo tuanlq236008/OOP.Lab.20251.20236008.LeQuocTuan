@@ -14,12 +14,13 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hust.soict.dsai.aims.screen.CartScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="100.0" prefWidth="1044.0" BorderPane.alignment="CENTER">
          <children>
             <MenuBar>
               <menus>
@@ -27,25 +28,31 @@
                   <items>
                       <Menu mnemonicParsing="false" text="Update Store">
                         <items>
-                          <MenuItem mnemonicParsing="false" onAction="#handleAddBook" text="Add Book" />
-                              <MenuItem mnemonicParsing="false" onAction="#handleAddCD" text="Add CD" />
-                              <MenuItem mnemonicParsing="false" onAction="#handleAddDVD" text="Add DVD" />
+                          <MenuItem mnemonicParsing="false" text="Add Book" />
+                              <MenuItem mnemonicParsing="false" text="Add CD" />
+                              <MenuItem mnemonicParsing="false" text="Add DVD" />
                         </items>
                       </Menu>
-                    <MenuItem mnemonicParsing="false" onAction="#handleViewStore" text="View Store" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleViewCart" text="View Cart" />
+                    <MenuItem mnemonicParsing="false" text="View Store" />
+                        <MenuItem mnemonicParsing="false" text="View Cart" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
-            <Label text="Cart" textFill="AQUA">
-               <font>
-                  <Font size="50.0" />
-               </font>
-               <padding>
-                  <Insets right="10.0" />
-               </padding>
-            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Cart" textFill="AQUA">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <Region prefHeight="73.0" prefWidth="796.0" />
+                  <Button mnemonicParsing="false" onAction="#btnViewStorePressed" prefHeight="50.0" prefWidth="100.0" text="View Store" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </top>
@@ -66,7 +73,7 @@
                   <RadioButton fx:id="radioBtnFilterId" mnemonicParsing="false" selected="true" text="By ID" toggleGroup="$filterCategory" />
                </children>
             </HBox>
-            <TableView fx:id="tblMedia">
+            <TableView fx:id="tblMedia" prefHeight="518.0" prefWidth="864.0">
               <columns>
                 <TableColumn fx:id="colMediaTitle" prefWidth="75.0" text="Title" />
                 <TableColumn fx:id="colMediaCategory" prefWidth="75.0" text="Category" />

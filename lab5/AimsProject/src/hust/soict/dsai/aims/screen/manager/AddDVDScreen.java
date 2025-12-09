@@ -1,16 +1,16 @@
-package hust.soict.dsai.aims.screen;
+package hust.soict.dsai.aims.screen.manager;
 
-import hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 import java.awt.*;
 import javax.swing.*;
 
-public class AddBookScreen extends AddItemScreen {
-    private JTextField titleField, categoryField, costField, authorField;
+public class AddDVDScreen extends AddItemScreen {
+    private JTextField titleField, categoryField, costField, directorField, lengthField;
 
-    public AddBookScreen(Store store) {
+    public AddDVDScreen(Store store) {
         super(store);
-        setTitle("Add Book");
+        setTitle("Add Digital Video Disc");
 
         Container cp = getContentPane();
         cp.setLayout(new BorderLayout());
@@ -21,32 +21,35 @@ public class AddBookScreen extends AddItemScreen {
         titleField = createInputField();
         categoryField = createInputField();
         costField = createInputField();
-        authorField = createInputField();
+        directorField = createInputField();
+        lengthField = createInputField();
 
         inputPanel.add(createLabeledField("Title:", titleField));
         inputPanel.add(createLabeledField("Category:", categoryField));
         inputPanel.add(createLabeledField("Cost:", costField));
-        inputPanel.add(createLabeledField("Author:", authorField));
+        inputPanel.add(createLabeledField("Director:", directorField));
+        inputPanel.add(createLabeledField("Length:", lengthField));
 
         cp.add(inputPanel, BorderLayout.CENTER);
 
-        JButton addButton = new JButton("Add Book");
+        JButton addButton = new JButton("Add DVD");
         addButton.addActionListener(e -> {
             try {
                 String title = titleField.getText();
                 String category = categoryField.getText();
-                String author = authorField.getText();
+                String director = directorField.getText();
+                int length = Integer.parseInt(lengthField.getText());
                 float cost = Float.parseFloat(costField.getText());
 
-                Book book = new Book(title, category, cost);
-                book.addAuthor(author);
-                store.addMedia(book);
+                DigitalVideoDisc dvd = new DigitalVideoDisc(title, category, director, length, cost);
+                store.addMedia(dvd);
 
-                JOptionPane.showMessageDialog(this, "Book added to store!");
+                JOptionPane.showMessageDialog(this, "DVD added to store!");
                 new StoreScreen(store);
                 dispose();
             } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Invalid cost value.", "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Invalid length or cost value.", "Error",
+                        JOptionPane.ERROR_MESSAGE);
             }
         });
 

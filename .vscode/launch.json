@@ -3,6 +3,35 @@
     "configurations": [
         {
             "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.manager.StoreScreen",
+            "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4"
+        },
+        {
+            "type": "java",
+            "name": "TestViewStoreScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.test.screen.TestViewStoreScreen",
+            "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4",
+            "vmArgs": "--module-path /Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+        },
+        {
+            "type": "java",
+            "name": "StoreScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.store.StoreScreen",
+            "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4"
+        },
+        {
+            "type": "java",
+            "name": "CartScreen",
+            "request": "launch",
+            "mainClass": "hust.soict.dsai.aims.screen.Cart.CartScreen",
+            "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4"
+        },
+        {
+            "type": "java",
             "name": "Aims",
             "request": "launch",
             "mainClass": "hust.soict.dsai.aims.Aims",
@@ -19,7 +48,7 @@
             "type": "java",
             "name": "CartScreen",
             "request": "launch",
-            "mainClass": "hust.soict.dsai.aims.screen.CartScreen",
+            "mainClass": "hust.soict.dsai.aims.screen.cart.CartScreen",
             "projectName": "OOP.Lab.20251.20236008.LeQuocTuan_4ea376d4",
             "vmArgs": "--module-path /Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics"
         },

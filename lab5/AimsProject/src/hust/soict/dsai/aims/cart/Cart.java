@@ -30,6 +30,10 @@ public class Cart {
 		}
 	}
 
+	public void clear() {
+		itemsOrdered.clear();
+	}
+
 	public float totalCost() {
 		float total = 0;
 		for (Media media : itemsOrdered) {
@@ -88,7 +92,7 @@ public class Cart {
 		System.out.println("***************************************************");
 	}
 
-	public ObservableList<Media> getItemsOrdered() {
+	public ObservableList<?> getItemsOrdered() {
 		return itemsOrdered;
 	}
 

@@ -1,4 +1,4 @@
-package hust.soict.dsai.aims.screen;
+package hust.soict.dsai.aims.screen.manager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,8 +42,6 @@ public class StoreScreen extends JFrame {
         menu.add(new JMenuItem("View store"));
         JMenuItem viewCart = new JMenuItem("View cart");
         viewCart.addActionListener(e -> {
-            //new CartScreen(this.cart, store);
-
             this.setVisible(false);
         });
 
