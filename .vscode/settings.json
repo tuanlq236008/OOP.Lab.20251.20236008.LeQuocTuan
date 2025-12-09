@@ -9,5 +9,6 @@
         "/Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib/javafx.media.jar",
         "/Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib/javafx-swt.jar",
         "/Users/lequoctuan/Downloads/javafx-sdk-21.0.9/lib/javafx.fxml.jar"
-    ]
+    ],
+    "editor.fontSize": 14
 }

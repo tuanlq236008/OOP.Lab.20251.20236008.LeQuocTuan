@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 public class Painter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Painter1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Painter.fxml"));
         Parent root = loader.load();
 
         Scene scene = new Scene(root);
