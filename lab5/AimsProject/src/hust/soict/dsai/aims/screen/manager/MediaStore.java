@@ -57,7 +57,7 @@ public class MediaStore extends JPanel {
         if (media instanceof Playable) {
             JButton playButton = new JButton("Play");
             playButton.addActionListener(e -> {
-                ((Playable) media).play(); // still calls the actual play method
+                //((Playable) media).play(); // still calls the actual play method
 
                 JDialog dialog = new JDialog();
                 dialog.setTitle("Now Playing");

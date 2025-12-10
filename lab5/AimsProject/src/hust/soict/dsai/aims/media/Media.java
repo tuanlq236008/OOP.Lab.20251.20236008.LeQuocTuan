@@ -52,6 +52,23 @@ public class Media implements Comparable<Media> {
     }
     @Override
     public int compareTo(Media other) {
-        return this.title.compareTo(other.getTitle());
+        // Hợp đồng của Comparable.compareTo() nói rằng nó nên ném NullPointerException
+        // nếu đối tượng được chỉ định là null.
+        if (other == null) {
+            throw new NullPointerException("Cannot compare Media with a null object.");
+        }
+
+        // So sánh theo tiêu đề (title) trước
+        int titleComparison = this.title.compareTo(other.title);
+        if (titleComparison != 0) {
+            return titleComparison; // Nếu tiêu đề khác nhau, trả về kết quả so sánh tiêu đề
+        }
+
+        // Nếu tiêu đề giống nhau, so sánh theo chi phí (cost)
+        // Float.compare(float1, float2) trả về:
+        // - số âm nếu float1 < float2
+        // - 0 nếu float1 == float2
+        // - số dương nếu float1 > float2
+        return Float.compare(this.cost, other.cost);
     }
 }

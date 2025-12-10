@@ -3,6 +3,7 @@ import hust.soict.dsai.aims.cart.Cart;
 import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.store.Store;
 import java.util.Scanner;
+import hust.soict.dsai.aims.media.Playable;
 
 public class Aims {
     private static final Scanner scanner = new Scanner(System.in);
@@ -79,7 +80,12 @@ public class Aims {
                 case 1 -> cart.addMedia(media);
                 case 2 -> {
                     if (media instanceof Playable playable) {
-                        playable.play();
+                        try {
+                            playable.play();
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
                     } else {
                         System.out.println("This media cannot be played.");
                     }
@@ -119,7 +125,11 @@ public class Aims {
         Media media = store.searchByTitle(title);
         if (media != null) {
             if (media instanceof Playable playable) {
-                playable.play();
+                try {
+                    ((Playable)media).play();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             } else {
                 System.out.println("This media cannot be played.");
             }
